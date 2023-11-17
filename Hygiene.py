@@ -3,7 +3,15 @@ class Hygiene:
         self.duration = 12
     
     def poop(self):
-        print('poop')
+        if self.duration > 0:
+            self.duration -= 1
+            return -10
+        else:
+            return 0
 
     def wash(self):
-        print('wash')
+        if self.duration < 12:
+            self.duration += 1
+            return 10
+        else:
+            return 0

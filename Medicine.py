@@ -4,7 +4,9 @@ class Medicine:
         self.quantity = quantity
         self.healthCount = healthCount
 
-    def heal(self):
-        print('heal')
-
-    
+    def use(self):
+        if self.quantity > 0:
+            self.quantity -= 1
+            return self.healthCount
+        else:
+            return 0
