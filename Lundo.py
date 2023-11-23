@@ -1,3 +1,4 @@
+from Equipment import Equipment
 class Lundo:
     def __init__(self, name):
         self.name = name
@@ -7,10 +8,19 @@ class Lundo:
         self.fun = 50
         self.energy = 50
         self.money = 0
+        self.equipment = Equipment()
+
+    def addToEquipment(self, food):
+        self.equipment.addFood(food)
 
     def eat(self):
-        self.hunger -= 10
-        self.energy -= 5
+        foodName = input("What do you wanna eat today????")
+        food = self.equipment.getFood(foodName)
+        if food:
+            self.hunger += 10
+            self.energy += 5
+        else:
+            print("You need to buy something!")
 
     def play(self):
         self.fun += 10

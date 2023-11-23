@@ -7,6 +7,7 @@ from Hygiene import Hygiene
 
 def main():
     pet = Lundo("Fido")
+    pet.addToEquipment(Food("apple",1,1))
     pet.eat()
     pet.play()
     pet.work()
