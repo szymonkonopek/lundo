@@ -15,4 +15,20 @@ class Equipment:
                 return food
     
     def getListOfFood(self):
-        print(self.foodList)
+        for food in self.foodList:
+            print(food.getName())
+
+    def getListOfMeds(self):
+        for med in self.medicineList:
+            print(med.getName())
+
+    def addMedicine(self, medicine): 
+        self.medicineList.append(medicine)
+
+    def getMedicine(self, name):
+        print("hllo")
+        for index, med in enumerate(self.medicineList):
+            if (med.getName() == name):
+                self.medicineList.pop(index)
+                return med
+    
